@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "548170442300",
+    "project_id": "adib-bd7f4",
+    "storage_bucket": "adib-bd7f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548170442300:android:dfedcd5a30e2663c438539",
+        "android_client_info": {
+          "package_name": "com.example.adib"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548170442300-jgiqq91v3dnitj0g7rm80rl6es2q9ies.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH-6u9ubcDRkPVsf3nKUO5RcRx1hgDpT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548170442300-jgiqq91v3dnitj0g7rm80rl6es2q9ies.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
