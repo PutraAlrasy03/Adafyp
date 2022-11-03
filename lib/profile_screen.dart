@@ -48,7 +48,7 @@ class _ProfileScreenState extends State<ProfileScreen>
               tertiary: Color.fromARGB(255, 35, 57, 129)),
           scaffoldBackgroundColor: Color.fromARGB(255, 32, 55, 129)),
       home: const MyHomePage(
-        title: 'Youth Higher Learning',
+        title: 'MarketSpace',
       ),
     );
   }
