@@ -32,7 +32,7 @@ class _OnBoardingState extends State<OnBoarding>
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(
-              'assets/images/blogging.png',
+              'assets/images/todo.png',
               height: 300,
               width: 300,
             ),
@@ -42,7 +42,7 @@ class _OnBoardingState extends State<OnBoarding>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Daily news and Blog!',
+                    'To Do List !',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -53,7 +53,7 @@ class _OnBoardingState extends State<OnBoarding>
                     height: 10,
                   ),
                   Text(
-                    "Boring with existing blog app? Use our application that also have blog. This app will show best news about study in higher education.",
+                    "By keeping such a list, you make sure that your tasks are written down all in one place so you don't forget \nanything important !",
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
@@ -72,7 +72,7 @@ class _OnBoardingState extends State<OnBoarding>
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(
-              'assets/images/scholarship.png',
+              'assets/images/post.png',
               height: 300,
               width: 300,
             ),
@@ -82,7 +82,7 @@ class _OnBoardingState extends State<OnBoarding>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Find Your Scholarship',
+                    'Create New Feed !',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -93,7 +93,7 @@ class _OnBoardingState extends State<OnBoarding>
                     height: 10,
                   ),
                   Text(
-                    "Having problem with financial? Worry about university fee? Dont worry this application will provide the scholarship",
+                    "Create a creative posting ! You can select the multi platform to share your idea !",
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
@@ -112,7 +112,7 @@ class _OnBoardingState extends State<OnBoarding>
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(
-              'assets/images/elearning.png',
+              'assets/images/reminder.png',
               height: 300,
               width: 300,
             ),
@@ -122,7 +122,7 @@ class _OnBoardingState extends State<OnBoarding>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Generate Future Path!',
+                    'Set a Reminder !',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -133,7 +133,7 @@ class _OnBoardingState extends State<OnBoarding>
                     height: 10,
                   ),
                   Text(
-                    "Want to continue study but dont know what course to take? Try this application, answer 10 questionnare and see the best course suit for you!",
+                    "Always forget the important days? Dont worry here we have a reminder !",
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
