@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:adib/registration.dart';
 import 'package:adib/Onboarding.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'profile_screen.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:adib/profile_screen.dart';
@@ -164,7 +165,7 @@ class _LoginScreeenState extends State<LoginScreeen> {
                     SizedBox(
                         height: 200,
                         child: Image.asset(
-                          "assets/images/yth.png",
+                          "assets/images/socmed.png",
                           fit: BoxFit.contain,
                         )),
                     SizedBox(height: 45),

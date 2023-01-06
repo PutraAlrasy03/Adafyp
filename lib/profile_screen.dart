@@ -1,10 +1,13 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:adib/mail.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fancy_drawer/fancy_drawer.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:adib/mail.dart';
+
 import 'package:adib/main.dart';
 import 'package:adib/search.dart';
 import 'package:adib/home_screen.dart';

@@ -181,10 +181,8 @@ class _AddPostScreenState extends State<AddPostScreen> {
                 SizedBox(
                   height: 30,
                 ),
-                RaisedButton(
+                ElevatedButton(
                     child: Text("Upload"),
-                    textColor: Color.fromARGB(255, 22, 36, 82),
-                    color: Color.fromARGB(255, 247, 147, 180),
                     onPressed: () async {
                       setState(() {
                         showSpinner = true;

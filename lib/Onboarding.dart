@@ -142,11 +142,7 @@ class _OnBoardingState extends State<OnBoarding>
                   ButtonTheme(
                     height: 50,
                     minWidth: 150,
-                    child: RaisedButton(
-                      textColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
+                    child: ElevatedButton(
                       child: Text(
                         'Get Started !',
                         style: TextStyle(fontSize: 20),
