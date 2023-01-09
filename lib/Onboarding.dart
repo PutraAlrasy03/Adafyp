@@ -66,7 +66,7 @@ class _OnBoardingState extends State<OnBoarding>
         ),
       ),
       Container(
-        color: Color(0xff27b56f),
+        color: Color.fromARGB(255, 126, 9, 141),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

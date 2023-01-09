@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
             element.name.toLowerCase().contains(text.toLowerCase()))
         .toList();
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 32, 55, 129),
+        backgroundColor: Color.fromARGB(255, 233, 130, 61),
         body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
             child: Column(

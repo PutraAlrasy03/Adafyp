@@ -150,7 +150,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     final signUpButton = Material(
       elevation: 5,
       borderRadius: BorderRadius.circular(30),
-      color: Colors.redAccent,
+      color: Color.fromARGB(255, 36, 145, 248),
       child: MaterialButton(
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
         minWidth: MediaQuery.of(context).size.width,
@@ -171,7 +171,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.red),
+          icon: Icon(
+            Icons.arrow_back,
+            color: Color.fromARGB(255, 36, 145, 248),
+          ),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -192,7 +195,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     SizedBox(
                         height: 180,
                         child: Image.asset(
-                          "assets/images/yth.png",
+                          "assets/images/socmed.png",
                           fit: BoxFit.contain,
                         )),
                     SizedBox(height: 45),

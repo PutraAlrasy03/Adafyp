@@ -46,10 +46,10 @@ class _ProfileScreenState extends State<ProfileScreen>
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           colorScheme: ColorScheme.fromSwatch().copyWith(
-              primary: Color.fromARGB(255, 241, 69, 126),
-              secondary: Color.fromARGB(255, 241, 69, 126),
+              primary: Color.fromARGB(255, 36, 145, 248),
+              secondary: Color.fromARGB(255, 36, 145, 248),
               tertiary: Color.fromARGB(255, 35, 57, 129)),
-          scaffoldBackgroundColor: Color.fromARGB(255, 32, 55, 129)),
+          scaffoldBackgroundColor: Color.fromARGB(255, 233, 130, 61)),
       home: const MyHomePage(
         title: 'MarketSpace',
       ),
@@ -158,9 +158,9 @@ class _MyHomePageState extends State<MyHomePage>
               ),
               bottomNavigationBar: CurvedNavigationBar(
                 index: _currentIndex,
-                color: Color.fromARGB(255, 241, 69, 126),
-                backgroundColor: Color.fromARGB(255, 32, 55, 129),
-                buttonBackgroundColor: Color.fromARGB(255, 241, 69, 126),
+                color: Color.fromARGB(255, 36, 145, 248),
+                backgroundColor: Color.fromARGB(255, 233, 130, 61),
+                buttonBackgroundColor: Color.fromARGB(255, 36, 145, 248),
                 animationCurve: Curves.easeInOut,
                 animationDuration: Duration(milliseconds: 400),
                 onTap: (newIndex) {
