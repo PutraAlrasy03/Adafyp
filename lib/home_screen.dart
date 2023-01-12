@@ -15,6 +15,13 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final dbRef = FirebaseDatabase.instance.reference().child('Posts');
+  List<Item> searchList = ITEM_LIST;
+
+  void _toggleFavorite(int index) {
+    setState(() {
+      searchList[index].favorite = searchList[index].favorite == 0 ? 1 : 0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,90 +52,109 @@ class _HomeScreenState extends State<HomeScreen> {
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(10),
-                                        child: FadeInImage.assetNetwork(
-                                            fit: BoxFit.cover,
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                .25,
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                1,
-                                            placeholder:
-                                                'assets/images/load.png',
-                                            image: snapshot
-                                                .child('pImage')
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          child: FadeInImage.assetNetwork(
+                                              fit: BoxFit.cover,
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  .25,
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  1,
+                                              placeholder:
+                                                  'assets/images/load.png',
+                                              image: snapshot
+                                                  .child('pImage')
+                                                  .value
+                                                  .toString()),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10),
+                                          child: Text(
+                                            snapshot
+                                                .child('pTitle')
                                                 .value
-                                                .toString()),
-                                      ),
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10),
-                                        child: Text(
-                                          snapshot
-                                              .child('pTitle')
-                                              .value
-                                              .toString(),
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold),
+                                                .toString(),
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.bold),
+                                          ),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10),
-                                        child: Text(
-                                          snapshot
-                                              .child('pDescription')
-                                              .value
-                                              .toString(),
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.normal),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10),
+                                          child: Text(
+                                            snapshot
+                                                .child('pDescription')
+                                                .value
+                                                .toString(),
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.normal),
+                                          ),
                                         ),
-                                      ),
-                                      searchList[index].favorite == 0
-                                          ? Padding(
-                                              padding:
-                                                  const EdgeInsets.all(0.0),
-                                              child: IconButton(
-                                                icon:
-                                                    Icon(Icons.favorite_border),
-                                                color: Colors.red,
-                                                onPressed: () {
-                                                  setState(() {
-                                                    searchList[index]
-                                                        .favorite++;
-                                                  });
-                                                },
-                                              ),
-                                            )
-                                          : Row(
-                                              children: <Widget>[
-                                                IconButton(
-                                                  icon: Icon(Icons.favorite,
-                                                      color: Colors.red),
-                                                  onPressed: () {
-                                                    setState(() {
-                                                      searchList[index]
-                                                          .favorite--;
-                                                    });
-                                                  },
-                                                ),
-                                              ],
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        //Add the row widget here to display the icons side by side
+                                        Row(
+                                          children: <Widget>[
+                                            searchList[index].favorite == 0
+                                                ? IconButton(
+                                                    icon: Icon(
+                                                        Icons.favorite_border),
+                                                    color: Colors.red,
+                                                    onPressed: () {
+                                                      _toggleFavorite(index);
+                                                    },
+                                                  )
+                                                : IconButton(
+                                                    icon: Icon(Icons.favorite,
+                                                        color: Colors.red),
+                                                    onPressed: () {
+                                                      _toggleFavorite(index);
+                                                    },
+                                                  ),
+                                            SizedBox(
+                                              width: 10,
                                             ),
-                                    ],
-                                  )));
+                                            //Other icons here
+                                            searchList[index].favorite == 0
+                                                ? IconButton(
+                                                    icon: Icon(
+                                                        Icons.favorite_border),
+                                                    color: Colors.red,
+                                                    onPressed: () {
+                                                      _toggleFavorite(index);
+                                                    },
+                                                  )
+                                                : IconButton(
+                                                    icon: Icon(Icons.favorite,
+                                                        color: Colors.red),
+                                                    onPressed: () {
+                                                      _toggleFavorite(index);
+                                                    },
+                                                  ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            //Other icons here
+                                          ],
+                                        )
+                                      ])));
                         }),
                   )
                 ])),
