@@ -18,46 +18,33 @@ class Mail extends StatefulWidget {
 }
 
 class _MailState extends State<Mail> {
-  User? user = FirebaseAuth.instance.currentUser;
-  UserModel loggedInUser = UserModel();
+  final List<String> _imageUrls = [
+    "assets/images/socmed.png",
+    "assets/images/socmed.png",
+    "assets/images/socmed.png",
+    "assets/images/socmed.png",
+  ];
 
-  @override
-  void initState() {
-    super.initState();
-    FirebaseFirestore.instance
-        .collection("users")
-        .doc(user!.uid)
-        .get()
-        .then((value) {
-      this.loggedInUser = UserModel.formMap(value.data());
-      setState(() {});
-    });
-  }
+  final List<String> _captions = [
+    'Caption for image 1',
+    'Caption for image 2',
+    'Caption for image 3',
+    'Caption for image 4',
+  ];
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context)
-        .size; //this gonna give us total height and with of our device
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[],
-              ),
-            ),
-          )
-        ],
+      body: ListView.builder(
+        itemCount: _imageUrls.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: Image.asset('assets/images/${_imageUrls[index]}',
+                width: 50, height: 50, fit: BoxFit.cover),
+            title: Text(_captions[index]),
+          );
+        },
       ),
     );
-  }
-
-  Future<void> logout(BuildContext context) async {
-    await FirebaseAuth.instance.signOut();
-    Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
   }
 }

@@ -49,7 +49,7 @@ class _ProfileScreenState extends State<ProfileScreen>
               primary: Color.fromARGB(255, 36, 145, 248),
               secondary: Color.fromARGB(255, 36, 145, 248),
               tertiary: Color.fromARGB(255, 35, 57, 129)),
-          scaffoldBackgroundColor: Color.fromARGB(255, 233, 130, 61)),
+          scaffoldBackgroundColor: Color.fromARGB(255, 208, 196, 229)),
       home: const MyHomePage(
         title: 'MarketSpace',
       ),
