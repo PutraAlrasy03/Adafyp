@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
             element.name.toLowerCase().contains(text.toLowerCase()))
         .toList();
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 233, 130, 61),
+        backgroundColor: Color.fromARGB(255, 208, 196, 229),
         body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
             child: Column(
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               padding: const EdgeInsets.all(10.0),
                               child: Container(
                                   decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 185, 175, 241),
+                                    color: Color.fromARGB(255, 240, 146, 84),
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: Column(
@@ -134,16 +134,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                             //Other icons here
                                             searchList[index].favorite == 0
                                                 ? IconButton(
-                                                    icon: Icon(
-                                                        Icons.favorite_border),
-                                                    color: Colors.red,
+                                                    icon: Icon(Icons
+                                                        .facebook_outlined),
+                                                    color: Colors.blue,
                                                     onPressed: () {
                                                       _toggleFavorite(index);
                                                     },
                                                   )
                                                 : IconButton(
-                                                    icon: Icon(Icons.favorite,
-                                                        color: Colors.red),
+                                                    icon: Icon(Icons.facebook,
+                                                        color: Colors.blue),
                                                     onPressed: () {
                                                       _toggleFavorite(index);
                                                     },
