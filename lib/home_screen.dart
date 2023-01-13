@@ -14,6 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  bool _isPressed = false;
   final dbRef = FirebaseDatabase.instance.reference().child('Posts');
   List<Item> searchList = ITEM_LIST;
 
@@ -132,22 +133,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                               width: 10,
                                             ),
                                             //Other icons here
-                                            searchList[index].favorite == 0
-                                                ? IconButton(
-                                                    icon: Icon(Icons
-                                                        .facebook_outlined),
-                                                    color: Colors.blue,
-                                                    onPressed: () {
-                                                      _toggleFavorite(index);
-                                                    },
-                                                  )
-                                                : IconButton(
-                                                    icon: Icon(Icons.facebook,
-                                                        color: Colors.blue),
-                                                    onPressed: () {
-                                                      _toggleFavorite(index);
-                                                    },
-                                                  ),
+                                            InkWell(
+                                              onTap: () {
+                                                setState(() {
+                                                  _isPressed = !_isPressed;
+                                                });
+                                              },
+                                              child: Icon(
+                                                _isPressed
+                                                    ? Icons.facebook
+                                                    : Icons.facebook_outlined,
+                                                color: _isPressed
+                                                    ? Colors.blue
+                                                    : null,
+                                              ),
+                                            ),
                                             SizedBox(
                                               width: 10,
                                             ),
