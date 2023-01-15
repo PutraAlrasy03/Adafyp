@@ -5,13 +5,15 @@ import 'package:adib/constants.dart';
 class CategoryCard extends StatelessWidget {
   final String svgSrc;
   final String title;
+  final String subtitle;
   final Function()? press;
-  const CategoryCard({
-    Key? key,
-    required this.svgSrc,
-    required this.title,
-    required this.press,
-  }) : super(key: key);
+  const CategoryCard(
+      {Key? key,
+      required this.svgSrc,
+      required this.title,
+      required this.press,
+      required this.subtitle})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +46,14 @@ class CategoryCard extends StatelessWidget {
                   Spacer(),
                   Text(
                     title,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6!
+                        .copyWith(fontSize: 15),
+                  ),
+                  Text(
+                    subtitle,
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
