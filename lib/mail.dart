@@ -23,13 +23,11 @@ class _MailState extends State<Mail> {
   UserModel loggedInUser = UserModel();
 
   final SATimages = [
-    'assets/images/pts.jpg',
-    'assets/images/jpas.png',
-    'assets/images/mara.jpg',
-    'assets/images/pt2.png',
-    'assets/images/ua.jpg',
-    'assets/images/is.jpg',
-    'assets/images/phg.jpg',
+    'assets/images/cny.png',
+    'assets/images/ram.jpg',
+    'assets/images/labor.jpg',
+    'assets/images/raya.jpg',
+    'assets/images/wesak.jpg',
   ];
 
   @override
@@ -91,55 +89,55 @@ class _MailState extends State<Mail> {
                         CategoryCard(
                           title: "Chinese New Year",
                           subtitle: "1/02/2023",
-                          svgSrc: "assets/icons/Banknegara.svg",
+                          svgSrc: "assets/icons/lion2.svg",
                           press: () => launch(
                               'https://www.bnm.gov.my/careers/scholarships'),
                         ),
                         CategoryCard(
                           title: "Awal Ramadan",
                           subtitle: "3/04/2023",
-                          svgSrc: "assets/icons/jpa.svg",
+                          svgSrc: "assets/icons/ram.svg",
                           press: () => launch(
                               'https://www.index.my/permohonan-biasiswa-jpa-program-ijazah-dalam-negara-pidn/'),
                         ),
                         CategoryCard(
                           title: "Hari Pekerja",
                           subtitle: "1/05/2023",
-                          svgSrc: "assets/icons/PTPTN1.svg",
+                          svgSrc: "assets/icons/labor.svg",
                           press: () => launch('https://www.ptptn.gov.my/'),
                         ),
                         CategoryCard(
                           title: "Hari Raya Aidilfitri",
                           subtitle: "2/05/2023",
-                          svgSrc: "assets/icons/shell3.svg",
+                          svgSrc: "assets/icons/raya.svg",
                           press: () => launch(
                               'https://www.shell.com.my/careers/students-and-graduates/scholarships.html'),
                         ),
                         CategoryCard(
                           title: "Hari Wesak",
                           subtitle: "15/05/23",
-                          svgSrc: "assets/icons/yk4.svg",
+                          svgSrc: "assets/icons/wesak.svg",
                           press: () =>
                               launch('https://www.yayasankhazanah.com.my'),
                         ),
                         CategoryCard(
                           title: "Hari Gawai",
                           subtitle: "1/06/2023",
-                          svgSrc: "assets/icons/tun2.svg",
+                          svgSrc: "assets/icons/gawai.svg",
                           press: () => launch(
                               'https://www.yayasantar.org.my/scholarships/biasiswa-tunku-abdul-rahman/'),
                         ),
                         CategoryCard(
                           title: "Hari Keputeraan YDP Agong",
                           subtitle: "6/06/2023",
-                          svgSrc: "assets/icons/kt2.svg",
+                          svgSrc: "assets/icons/ydp.svg",
                           press: () => launch(
                               'https://www.karangkraf.com/biasiswa-karangkraf/'),
                         ),
                         CategoryCard(
                           title: "Hari Raya Haji",
                           subtitle: "11/07/2023",
-                          svgSrc: "assets/icons/br1.svg",
+                          svgSrc: "assets/icons/cow.svg",
                           press: () => launch(
                               'https://application.yayasanbankrakyat.com.my/'),
                         ),
