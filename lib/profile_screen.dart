@@ -172,8 +172,8 @@ class _MyHomePageState extends State<MyHomePage>
                 },
                 items: [
                   Icon(Icons.home, color: Colors.white),
-                  Icon(Icons.search, color: Colors.white),
-                  Icon(Icons.mail, color: Colors.white),
+                  Icon(Icons.note, color: Colors.white),
+                  Icon(Icons.info, color: Colors.white),
                 ],
               ),
             )));
